@@ -28,7 +28,7 @@ int main(){
         }
     }
 
-    if (!acertou) { //! negação!
+    if (!acertou) { // O (!) indica negação
         printf("Que pena! Você não conseguiu adivinhar. O número secreto era %d.\n", numero_secreto);
     }
     return 0;
