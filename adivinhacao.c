@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#define NUMERO_DE_TENTATIVAS 5
 
 int main(){
     printf("******************************************\n");
@@ -13,8 +14,8 @@ int main(){
     int chute = 0;
     int tentativa, acertou = 0;
 
-    for (tentativa = 1; tentativa <= 10; tentativa++) { // a pessoa tem 10 tentativas
-        printf("Tentativa %d: ", tentativa);
+    for (tentativa = 1; tentativa <= NUMERO_DE_TENTATIVAS; tentativa++) { // a pessoa tem 10 tentativas
+        printf("Tentativa %d de %d\n: ", tentativa, NUMERO_DE_TENTATIVAS); //mostra em qual tentativa voce estia
         scanf("%d", &chute);
 
         if (chute == numero_secreto) {
@@ -31,6 +32,5 @@ int main(){
     if (!acertou) { // o (!) indica a negativa.
         printf("Que pena! Você não conseguiu adivinhar. O número secreto era %d.\n", numero_secreto);
     }
-    return 0;
 }
 
